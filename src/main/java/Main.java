@@ -12,14 +12,14 @@ public class Main {
         System.out.println("У женщины по имени " + mom + " есть сын, " + son + ".");
 
         try {
-            // Не хватает обязательных полей
+            // Не хватает полей
             new PersonBuilder().build();
         } catch (IllegalStateException e) {
             e.printStackTrace();
         }
 
         try {
-            // Возраст недопустимый
+            // Возраст меньше
             new PersonBuilder().setAge(-100).build();
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
