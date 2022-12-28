@@ -37,7 +37,7 @@ public class PersonBuilder {
 
     public Person build() {
         if (name == null) {
-            throw new IllegalArgumentException("Не хватает обязательных полей");
+            throw new IllegalArgumentException("Не заполнены обязательные поля");
         }
 
         return new Person(name, surname, age, adress, happyBirthday);
